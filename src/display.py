@@ -219,6 +219,7 @@ delayBox     = SlideBox('Delay', grey, (105, 440, 112, 50))
 algorithmBox = DropdownBox('Algorithm', (242, 440, 140, 50), baseFont)
 playButton  = ButtonBox('res/playButton.png', (390, 440, 50, 50))
 stopButton = ButtonBox('res/stopButton.png', (390, 440, 50, 50))
+elapsed_time_box = TextBox('Elapsed Time:', grey, (windowSize[0] - 200, windowSize[1] - 60, 200, 50), '0.00')
 
 
 def updateWidgets(event):
@@ -254,6 +255,7 @@ def drawBottomMenu():
         stopButton.draw()
     else:
         playButton.draw()
+    elapsed_time_box.draw()
 
 
 def draw_rect_alpha(surface, color, rect):
